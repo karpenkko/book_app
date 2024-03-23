@@ -1,0 +1,76 @@
+{
+  "UA": [
+    {
+      "id": 0,
+      "name": "За Перекопом є земля",
+      "author": "Анастасія Левкова",
+      "description": "Крим. Саме тут минуло дитинство, юність і перше кохання головної героїні роману. Саме тут вона зрозуміла, що є українкою. Ні дідусь-підполковник КДБ, ані російська кров у венах не стали цьому на заваді.Наче орнамент, у романі переплітаються кримськотатарська культура і українська історія. На сторінках книжки читач зустрінеться з кримськими татарами, караїмами, українцями, росіянами, німцями, євреями, греками, вірменами Криму, крок за кроком відкриватиме шафи з родинними скелетами. Разом з головною героїнею та її подругою Аліє пройде шлях від їхнього дитинства – з 1990-х – аж до окупації півострова Росією в 2014-му, з екскурсами в давнішу історію Криму.«За Перекопом є земля» — це спроба відкрити материк для півострова, а півострів для материка з незвичного ракурсу. Адже і там, і там є земля. Її варто пізнати й повернути їй цілісність.",
+      "cover": "assets/covers/za_perekopom_ye_zemlia.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Я бачу вас цікавить пітьма",
+      "author": "Ілларіон Павлюк",
+      "description": "Андрій Гайстер, кримінальний психолог з Києва потрапляє в маленьке забуте село Буськів Сад розслідувати зникнення маленької дівчинки. Однієї зимової ночі вона вийшла з дому і більше не повернулась. Село вкрите чутками про маніяка – Звіра, який полює на дівчат і не лишає жодних слідів.Чому люди зупиняються, а не продовжують шукати жертв? Чому в селищі головне правило «кожному своє»? Чи вистачить сил Андрію відшукати дівчинку? І чому у Буськовому Саду немає кладовища?",
+      "cover": "assets/covers/ya_bachu_vas_tsikavyt_pitma.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Танці з кістками",
+      "author": "Андрій Сем'янків",
+      "description": "Северин паталогоанатом-невдаха, якого не цінують на роботі, його зарплата катастрофічно мала. Його особисте життя зовсім не зрозуміле, а самооцінка стрімко мчить до нуля. І перебуваючи майже на самому дні він отримує нелегальну пропозицію заробити на ринку по трансплантації органів. Спокуса влаштувати собі забезпечене життя і впевненість в тому, що він всього лише забирає маленьку частинку у вже мертвих людей переконує погодитися. Поки що у мертвих людей, поки що дрібничку...Але скоївши один злочин, вчиняти нові і нові стає значно легше. І те, що вчора було забороненим, сьогодні стає нормою. Чи ще здатен він зупинитися і як далеко може зайти?",
+      "cover": "assets/covers/tantsi_z_kistkamy.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Не озирайся і мовчи",
+      "author": "Макс Кідрук",
+      "description": "Марку Грозану чотирнадцять років. Сім'я вимушено змінює місце проживання і Марк потрапляє до нової школи де стає об'єктом для цькувань і знущань. Він розумний і дуже сором'язливий, а тепер всі його мрії лиш про те, щоб знайти світ в якому немає місця злу і жорстокості. І знайомство з Сонею, дівчинкою з паралельного класу, змінює все, а його мрія здається стає здійсненною.  Соня розповідає йому про існування такого світу і про можливість туди потрапити просто через ліфт у їхньому будинку.Марк не підозрює, що звичайна мандрівка на десятий поверх загрожує чимось набагато гіршим за руйнування уявлень про реальний світ.",
+      "cover": "assets/covers/ne_ozyraisia_i_movchy.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Лазарус",
+      "author": "Світлана Тараторіна",
+      "description": "1913 рік, Київ. На вулицях міста співіснують люди й нечисть — упирі, чорти, перевертні, лісовики, польовики й водяники. Битви між ними в минулому. Чи так лише здається?Трапляється подія, яка загрожує зруйнувати хиткий мир. Біля Труханового острова знаходять людину з розпоротим животом. Хто і навіщо його вбив? Щоб розслідувати вбивство і стати на заваді новій війні, залучають слідчого Олександра Тюрина, який має причини уникати Києва, проте волею випадку опиняється в цей час у місті. Детективні головоломки, злочини та інтриги, кохання, родинні таємниці і давні передбачення.",
+      "cover": "assets/covers/lazarus.jpg"
+    }
+  ],
+  "UK": [
+    {
+      "id": 5,
+      "name": "Coraline",
+      "author": "Neil Gaiman",
+      "description": "\"Coraline discovered the door a little while after they moved into the house....\"\nWhen Coraline steps through a door to find another house strangely similar to her own (only better), things seem marvelous.\nBut there's another mother there, and another father, and they want her to stay and be their little girl. They want to change her and never let her go.\nCoraline will have to fight with all her wit and courage if she is to save herself and return to her ordinary life.",
+      "cover": "assets/covers/caroline.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Frankenstein",
+      "author": "Mary Shelley",
+      "description": "\"Never did I behold a vision so horrible as his face, of such loathsome, yet appalling hideousness\"\nA twisted, upside-down creation myth, Mary Shelley's chilling Gothic tale lays bare the dark side of science, and the horror within us all. It tells the story of Victor Frankenstein, who plunders graveyards to create a new being from the bodies of the dead - but whose botched creature causes nothing but murder and destruction. Written after a nightmare when its author was only eighteen, Frankenstein gave birth to the modern science fiction novel.",
+      "cover": "assets/covers/frankenstein.jpg"
+    },
+    {
+      "id": 7,
+      "name": "PRIDE AND PREJUDICE",
+      "author": "Jane Austen",
+      "description": "Few have failed to be charmed by the witty and independent spirit of Elizabeth Bennet in Austen’s beloved classic Pride and Prejudice. When Elizabeth Bennet first meets eligible bachelor Fitzwilliam Darcy, she thinks him arrogant and conceited; he is indifferent to her good looks and lively mind. When she later discovers that Darcy has involved himself in the troubled relationship between his friend Bingley and her beloved sister Jane, she is determined to dislike him more than ever. In the sparkling comedy of manners that follows, Jane Austen shows us the folly of judging by first impressions and superbly evokes the friendships, gossip and snobberies of provincial middle-class life.",
+      "cover": "assets/covers/pride_and_prejudice.jpg"
+    },
+    {
+      "id": 8,
+      "name": "The Lord Of The Rings",
+      "author": "J.R.R. Tolkien",
+      "description": "One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.\nIn ancient times the Rings of Power were crafted by the Elven-smiths, and Sauron, the Dark Lord, forged the One Ring, filling it with his own power so that he could rule all others. But the One Ring was taken from him, and though he sought it throughout Middle-earth, it remained lost to him. After many ages it fell by chance into the hands of the hobbit Bilbo Baggins.\nFrom Sauron's fastness in the Dark Tower of Mordor, his power spread far and wide. Sauron gathered all the Great Rings to him, but always he searched for the One Ring that would complete his dominion.\nWhen Bilbo reached his eleventy-first birthday he disappeared, bequeathing to his young cousin Frodo the Ruling Ring and a perilous quest: to journey across Middle-earth, deep into the shadow of the Dark Lord, and destroy the Ring by casting it into the Cracks of Doom.",
+      "cover": "assets/covers/lord_of_the_rings.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Going Postal",
+      "author": "Terry Pratchett",
+      "description": "Suddenly, condemned arch-swindler Moist von Lipwig found himself with a noose around his neck and dropping through a trapdoor into . . . a government job?\nBy all rights, Moist should be meeting his maker rather than being offered a position as Postmaster by Lord Vetinari, supreme ruler of Ankh-Morpork. Getting the moribund Postal Service up and running again, however, may prove an impossible task, what with literally mountains of decades-old undelivered mail clogging every nook and cranny of the broken-down post office. Worse still, Moist could swear the mail is talking to him. Worst of all, it means taking on the gargantuan, greedy Grand Trunk clacks communication monopoly and its bloodthirsty piratical headman. But if the bold and undoable are what's called for, Moist's the man for the job—to move the mail, continue breathing, get the girl, and specially deliver that invaluable commodity that every being, human or otherwise requires: hope.",
+      "cover": "assets/covers/going_postal.jpg"
+    }
+  ]
+}
