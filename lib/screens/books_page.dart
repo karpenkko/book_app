@@ -9,12 +9,13 @@ class BooksPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(left: 8, right: 8, top: 30),
-        child: ListView(
-          shrinkWrap: true,
-          children: [
-            Wrap(
+      body: ListView(
+        physics: const BouncingScrollPhysics(),
+        shrinkWrap: true,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10, right: 10, top: 40),
+            child: Wrap(
               children: jsonData.map((book) {
                 return BookCard(
                   id: book['id'],
@@ -25,8 +26,8 @@ class BooksPage extends StatelessWidget {
                 );
               }).toList(),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

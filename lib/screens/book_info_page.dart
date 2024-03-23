@@ -25,7 +25,6 @@ class BookDetailPage extends StatelessWidget {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Hero(
                 tag: 'cover_$cover',
@@ -48,7 +47,8 @@ class BookDetailPage extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 14,
                   height: 1.4,
-                fontWeight: FontWeight.w300),
+                fontWeight: FontWeight.w300
+                ),
               ),
             ],
           ),

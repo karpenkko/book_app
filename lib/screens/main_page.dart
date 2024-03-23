@@ -81,6 +81,12 @@ class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin
       ),
       bottomNavigationBar: TabBar(
         controller: _tabController,
+        indicatorSize: TabBarIndicatorSize.tab,
+        indicator: BoxDecoration(
+          color: Colors.white10,
+          borderRadius: BorderRadius.circular(8),
+        ),
+        labelColor: Colors.white,
         tabs: [
           Tab(
             icon: Image.asset(
@@ -97,7 +103,6 @@ class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin
             text: 'English books',
           ),
         ],
-
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
