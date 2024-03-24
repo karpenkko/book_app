@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/favorite_books.dart';
-import 'book_info_page.dart';
+import '../screens/book_info_page.dart';
 
 
 class FavoriteDrawer extends StatefulWidget {
