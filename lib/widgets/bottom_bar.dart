@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class BookNavBar extends StatelessWidget implements PreferredSizeWidget{
+class BookNavBar extends StatefulWidget{
   final TabController tabController;
 
   const BookNavBar({
@@ -9,34 +9,74 @@ class BookNavBar extends StatelessWidget implements PreferredSizeWidget{
   });
 
   @override
+  State<BookNavBar> createState() => _BookNavBarState();
+}
+
+class _BookNavBarState extends State<BookNavBar> {
+  @override
+
+
   Widget build(BuildContext context){
-    return TabBar(
-      controller: tabController,
-      indicatorSize: TabBarIndicatorSize.tab,
-      indicator: BoxDecoration(
-        color: Colors.white10,
-        borderRadius: BorderRadius.circular(8),
-      ),
-      labelColor: Colors.white,
-      tabs: [
-        Tab(
-          icon: Image.asset(
-            'assets/icons/flag_ua.png',
+    return BottomNavigationBar(
+      items: [
+        BottomNavigationBarItem(
+          icon: Image.asset('assets/icons/flag_ua.png',
             height: 32,
           ),
-          text: 'Ukrainian books',
+          label: 'Ukrainian books',
         ),
-        Tab(
-          icon: Image.asset(
-            'assets/icons/flag_uk.png',
+        BottomNavigationBarItem(
+          icon: Image.asset('assets/icons/flag_uk.png',
             height: 32,
           ),
-          text: 'English books',
+          label: 'English books',
         ),
       ],
+      currentIndex: widget.tabController.index,
+      onTap: (int index) {
+        setState(() {});
+        widget.tabController.animateTo(index);
+      },
+      backgroundColor: Colors.black87,
+      selectedFontSize: 14,
+      unselectedFontSize: 12,
     );
-  }
 
-  @override
-  Size get preferredSize => const Size.fromHeight(kBottomNavigationBarHeight);
+
+  // Widget build(BuildContext context){
+  //   return Container(
+  //     color: Colors.black87,
+  //     child: TabBar(
+  //       controller: widget.tabController,
+  //       indicatorSize: TabBarIndicatorSize.tab,
+  //       indicator: BoxDecoration(
+  //         color: Colors.white24,
+  //         borderRadius: BorderRadius.circular(8),
+  //       ),
+  //       labelColor: Colors.white,
+  //       tabs: [
+  //         Tab(
+  //           icon: Image.asset(
+  //             'assets/icons/flag_ua.png',
+  //             height: 32,
+  //           ),
+  //           text: 'Ukrainian books',
+  //         ),
+  //         Tab(
+  //           icon: Image.asset(
+  //             'assets/icons/flag_uk.png',
+  //             height: 32,
+  //           ),
+  //           text: 'English books',
+  //         ),
+  //       ],
+  //     ),
+  //   );
+
+
+
+  }
 }
+
+
+
