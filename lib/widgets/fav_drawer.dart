@@ -64,7 +64,7 @@ class _FavoriteDrawerState extends State<FavoriteDrawer> {
               padding: const EdgeInsets.only(top: 8.0),
               child: ListTile(
                 leading: Hero(
-                  tag: 'cover_${item['cover']}',
+                  tag: 'cover_${item['id']}_${item['cover']}',
                   child: Container(
                     width: 36,
                     height: 50,

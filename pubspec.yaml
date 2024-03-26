@@ -56,6 +56,8 @@ flutter:
   assets:
     - assets/icons/flag_ua.png
     - assets/icons/flag_uk.png
+    - assets/icons/selected_flag_ua.png
+    - assets/icons/selected_flag_uk.png
 
     - assets/covers/za_perekopom_ye_zemlia.jpg
     - assets/covers/ya_bachu_vas_tsikavyt_pitma.jpg

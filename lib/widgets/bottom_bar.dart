@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class BookNavBar extends StatefulWidget{
+class BookNavBar extends StatefulWidget {
   final TabController tabController;
 
   const BookNavBar({
@@ -8,25 +8,36 @@ class BookNavBar extends StatefulWidget{
     required this.tabController,
   });
 
+
+
   @override
   State<BookNavBar> createState() => _BookNavBarState();
 }
 
 class _BookNavBarState extends State<BookNavBar> {
+
   @override
-
-
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return BottomNavigationBar(
       items: [
         BottomNavigationBarItem(
-          icon: Image.asset('assets/icons/flag_ua.png',
+          icon: Image.asset(
+            'assets/icons/flag_ua.png',
+            height: 32,
+          ),
+          activeIcon: Image.asset(
+            'assets/icons/selected_flag_ua.png',
             height: 32,
           ),
           label: 'Ukrainian books',
         ),
         BottomNavigationBarItem(
-          icon: Image.asset('assets/icons/flag_uk.png',
+          icon: Image.asset(
+            'assets/icons/flag_uk.png',
+            height: 32,
+          ),
+          activeIcon: Image.asset(
+            'assets/icons/selected_flag_uk.png',
             height: 32,
           ),
           label: 'English books',
@@ -42,41 +53,34 @@ class _BookNavBarState extends State<BookNavBar> {
       unselectedFontSize: 12,
     );
 
-
-  // Widget build(BuildContext context){
-  //   return Container(
-  //     color: Colors.black87,
-  //     child: TabBar(
-  //       controller: widget.tabController,
-  //       indicatorSize: TabBarIndicatorSize.tab,
-  //       indicator: BoxDecoration(
-  //         color: Colors.white24,
-  //         borderRadius: BorderRadius.circular(8),
-  //       ),
-  //       labelColor: Colors.white,
-  //       tabs: [
-  //         Tab(
-  //           icon: Image.asset(
-  //             'assets/icons/flag_ua.png',
-  //             height: 32,
-  //           ),
-  //           text: 'Ukrainian books',
-  //         ),
-  //         Tab(
-  //           icon: Image.asset(
-  //             'assets/icons/flag_uk.png',
-  //             height: 32,
-  //           ),
-  //           text: 'English books',
-  //         ),
-  //       ],
-  //     ),
-  //   );
-
-
-
+    // Widget build(BuildContext context){
+    //   return Container(
+    //     color: Colors.black87,
+    //     child: TabBar(
+    //       controller: widget.tabController,
+    //       indicatorSize: TabBarIndicatorSize.tab,
+    //       indicator: BoxDecoration(
+    //         color: Colors.white24,
+    //         borderRadius: BorderRadius.circular(8),
+    //       ),
+    //       labelColor: Colors.white,
+    //       tabs: [
+    //         Tab(
+    //           icon: Image.asset(
+    //             'assets/icons/flag_ua.png',
+    //             height: 32,
+    //           ),
+    //           text: 'Ukrainian books',
+    //         ),
+    //         Tab(
+    //           icon: Image.asset(
+    //             'assets/icons/flag_uk.png',
+    //             height: 32,
+    //           ),
+    //           text: 'English books',
+    //         ),
+    //       ],
+    //     ),
+    //   );
   }
 }
-
-
-
