@@ -55,8 +55,6 @@ class BookAppBar extends StatelessWidget implements PreferredSizeWidget {
                   theme:
                       brightness == Brightness.light ? darkTheme : lightTheme,
                   isReversed: brightness == Brightness.light ? true : false,
-                  // isReversed: false,
-                  // isReversed: true,
                 );
               },
             );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class FloatingFavouriteButton extends StatefulWidget {
+class FloatingFavouriteButton extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
   final int favouriteCount;
 
@@ -11,18 +11,12 @@ class FloatingFavouriteButton extends StatefulWidget {
   });
 
   @override
-  State<FloatingFavouriteButton> createState() =>
-      _FloatingFavouriteButtonState();
-}
-
-class _FloatingFavouriteButtonState extends State<FloatingFavouriteButton> {
-  @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         FloatingActionButton(
           onPressed: () {
-            widget.scaffoldKey.currentState!.openDrawer();
+            scaffoldKey.currentState!.openDrawer();
           },
           shape: const CircleBorder(),
           backgroundColor: Colors.red,
@@ -37,7 +31,7 @@ class _FloatingFavouriteButtonState extends State<FloatingFavouriteButton> {
               Positioned(
                 top: 6,
                 child: Text(
-                  '${widget.favouriteCount}',
+                  '$favouriteCount',
                   style: const TextStyle(
                     color: Colors.red,
                     fontWeight: FontWeight.bold,
