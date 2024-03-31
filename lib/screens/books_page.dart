@@ -4,7 +4,10 @@ import '../widgets/book_card.dart';
 
 class BooksPage extends StatelessWidget {
   final List jsonData;
-  const BooksPage({super.key, required this.jsonData});
+  final Function updateFavourite;
+
+  const BooksPage(
+      {super.key, required this.jsonData, required this.updateFavourite});
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +21,12 @@ class BooksPage extends StatelessWidget {
             child: Wrap(
               children: jsonData.map((book) {
                 return BookCard(
-                  id: book['id'],
-                  title: book['name'],
-                  author: book['author'],
-                  cover: book['cover'],
-                  description: book['description'],
-                );
+                    id: book['id'],
+                    title: book['name'],
+                    author: book['author'],
+                    cover: book['cover'],
+                    description: book['description'],
+                    updateFavourite: updateFavourite);
               }).toList(),
             ),
           ),

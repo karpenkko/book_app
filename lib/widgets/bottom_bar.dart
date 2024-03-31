@@ -8,79 +8,77 @@ class BookNavBar extends StatefulWidget {
     required this.tabController,
   });
 
-
-
   @override
   State<BookNavBar> createState() => _BookNavBarState();
 }
 
 class _BookNavBarState extends State<BookNavBar> {
-
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      items: [
-        BottomNavigationBarItem(
-          icon: Image.asset(
-            'assets/icons/flag_ua.png',
-            height: 32,
-          ),
-          activeIcon: Image.asset(
-            'assets/icons/selected_flag_ua.png',
-            height: 32,
-          ),
-          label: 'Ukrainian books',
+    return Container(
+      color: Colors.black87,
+      child: TabBar(
+        controller: widget.tabController,
+        indicatorSize: TabBarIndicatorSize.tab,
+        indicator: BoxDecoration(
+          color: Colors.white24,
+          borderRadius: BorderRadius.circular(8),
         ),
-        BottomNavigationBarItem(
-          icon: Image.asset(
-            'assets/icons/flag_uk.png',
-            height: 32,
+        labelColor: Colors.white,
+        unselectedLabelColor: Colors.white60,
+        tabs: [
+          Tab(
+            icon: Image.asset(
+              'assets/icons/flag_ua.png',
+              height: 32,
+            ),
+            text: 'Ukrainian books',
           ),
-          activeIcon: Image.asset(
-            'assets/icons/selected_flag_uk.png',
-            height: 32,
+          Tab(
+            icon: Image.asset(
+              'assets/icons/flag_uk.png',
+              height: 32,
+            ),
+            text: 'English books',
           ),
-          label: 'English books',
-        ),
-      ],
-      currentIndex: widget.tabController.index,
-      onTap: (int index) {
-        setState(() {});
-        widget.tabController.animateTo(index);
-      },
-      backgroundColor: Colors.black87,
-      selectedFontSize: 14,
-      unselectedFontSize: 12,
+        ],
+      ),
     );
 
-    // Widget build(BuildContext context){
-    //   return Container(
-    //     color: Colors.black87,
-    //     child: TabBar(
-    //       controller: widget.tabController,
-    //       indicatorSize: TabBarIndicatorSize.tab,
-    //       indicator: BoxDecoration(
-    //         color: Colors.white24,
-    //         borderRadius: BorderRadius.circular(8),
+    // Widget build(BuildContext context) {
+    //   return BottomNavigationBar(
+    //     items: [
+    //       BottomNavigationBarItem(
+    //         icon: Image.asset(
+    //           'assets/icons/flag_ua.png',
+    //           height: 32,
+    //         ),
+    //         activeIcon: Image.asset(
+    //           'assets/icons/selected_flag_ua.png',
+    //           height: 32,
+    //         ),
+    //         label: 'Ukrainian books',
     //       ),
-    //       labelColor: Colors.white,
-    //       tabs: [
-    //         Tab(
-    //           icon: Image.asset(
-    //             'assets/icons/flag_ua.png',
-    //             height: 32,
-    //           ),
-    //           text: 'Ukrainian books',
+    //       BottomNavigationBarItem(
+    //         icon: Image.asset(
+    //           'assets/icons/flag_uk.png',
+    //           height: 32,
     //         ),
-    //         Tab(
-    //           icon: Image.asset(
-    //             'assets/icons/flag_uk.png',
-    //             height: 32,
-    //           ),
-    //           text: 'English books',
+    //         activeIcon: Image.asset(
+    //           'assets/icons/selected_flag_uk.png',
+    //           height: 32,
     //         ),
-    //       ],
-    //     ),
+    //         label: 'English books',
+    //       ),
+    //     ],
+    //     currentIndex: widget.tabController.index,
+    //     onTap: (int index) {
+    //       setState(() {});
+    //       widget.tabController.animateTo(index);
+    //     },
+    //     // backgroundColor: Colors.black87,
+    //     selectedFontSize: 14,
+    //     unselectedFontSize: 12,
     //   );
   }
 }

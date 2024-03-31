@@ -3,16 +3,16 @@ import 'package:provider/provider.dart';
 import '../models/favorite_books.dart';
 import '../screens/book_info_page.dart';
 
-
 class FavoriteDrawer extends StatefulWidget {
   final List uaData;
   final List ukData;
+  final Function updateFavourite;
 
-  const FavoriteDrawer({
-    super.key,
-    required this.uaData,
-    required this.ukData,
-  });
+  const FavoriteDrawer(
+      {super.key,
+      required this.uaData,
+      required this.ukData,
+      required this.updateFavourite});
 
   @override
   State<FavoriteDrawer> createState() => _FavoriteDrawerState();
@@ -22,14 +22,18 @@ class _FavoriteDrawerState extends State<FavoriteDrawer> {
   late List allBooks;
   late List favoriteBooks = [];
 
-  void createBookList(){
-    final favoriteBooksModel = Provider.of<FavoriteBooksModel>(context, listen: false);
+  void createBookList() {
+    final favoriteBooksModel =
+        Provider.of<FavoriteBooksModel>(context, listen: false);
     allBooks = [...widget.uaData, ...widget.ukData];
 
     final List<String> favoriteBookIds = favoriteBooksModel.favoriteBookIds;
-    favoriteBooks.addAll(allBooks.where((item) => favoriteBookIds.contains('${item['id']}') && !favoriteBooks.contains(item)));
-    favoriteBooks.removeWhere((item) => !favoriteBookIds.contains('${item['id']}') && favoriteBooks.contains(item));
-
+    favoriteBooks.addAll(allBooks.where((item) =>
+        favoriteBookIds.contains('${item['id']}') &&
+        !favoriteBooks.contains(item)));
+    favoriteBooks.removeWhere((item) =>
+        !favoriteBookIds.contains('${item['id']}') &&
+        favoriteBooks.contains(item));
   }
 
   @override
@@ -37,7 +41,6 @@ class _FavoriteDrawerState extends State<FavoriteDrawer> {
     super.initState();
     createBookList();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +89,8 @@ class _FavoriteDrawerState extends State<FavoriteDrawer> {
                 trailing: IconButton(
                   icon: Consumer<FavoriteBooksModel>(
                     builder: (context, favoriteBooksModel, child) {
-                      final isFavorite = favoriteBooksModel.favoriteBookIds.contains('${item['id']}');
+                      final isFavorite = favoriteBooksModel.favoriteBookIds
+                          .contains('${item['id']}');
                       return Icon(
                         isFavorite ? Icons.favorite : Icons.favorite_border,
                         color: Colors.red,
@@ -94,7 +98,12 @@ class _FavoriteDrawerState extends State<FavoriteDrawer> {
                     },
                   ),
                   onPressed: () {
-                    final favoriteBooksModel = Provider.of<FavoriteBooksModel>(context, listen: false);
+                    final favoriteBooksModel =
+                        Provider.of<FavoriteBooksModel>(context, listen: false);
+                    final isFavorite = favoriteBooksModel.favoriteBookIds
+                        .contains('${item['id']}');
+                    final increase = !isFavorite;
+                    widget.updateFavourite(increase: increase);
                     favoriteBooksModel.toggleFavorite('${item['id']}');
                     setState(() {
                       createBookList();

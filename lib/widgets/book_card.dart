@@ -4,22 +4,28 @@ import 'package:provider/provider.dart';
 import '../models/favorite_books.dart';
 import '../screens/book_info_page.dart';
 
-class BookCard extends StatelessWidget {
+class BookCard extends StatefulWidget {
   final int id;
   final String title;
   final String author;
   final String cover;
   final String description;
+  final Function updateFavourite;
 
-  const BookCard({
-    super.key,
-    required this.id,
-    required this.title,
-    required this.author,
-    required this.cover,
-    required this.description,
-  });
+  const BookCard(
+      {super.key,
+      required this.id,
+      required this.title,
+      required this.author,
+      required this.cover,
+      required this.description,
+      required this.updateFavourite});
 
+  @override
+  State<BookCard> createState() => _BookCardState();
+}
+
+class _BookCardState extends State<BookCard> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -28,10 +34,10 @@ class BookCard extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) => BookDetailPage(
-              title: title,
-              author: author,
-              cover: cover,
-              description: description,
+              title: widget.title,
+              author: widget.author,
+              cover: widget.cover,
+              description: widget.description,
             ),
           ),
         );
@@ -39,7 +45,6 @@ class BookCard extends StatelessWidget {
       child: Container(
         width: (MediaQuery.of(context).size.width - (16 * 3)) / 2,
         margin: const EdgeInsets.only(left: 6, right: 6, bottom: 30),
-
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -53,9 +58,9 @@ class BookCard extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10.0),
                       child: Hero(
-                        tag: 'cover_$cover',
+                        tag: 'cover_${widget.cover}',
                         child: Image.asset(
-                          cover,
+                          widget.cover,
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -74,16 +79,26 @@ class BookCard extends StatelessWidget {
                       child: IconButton(
                         icon: Consumer<FavoriteBooksModel>(
                           builder: (context, favoriteBooksModel, child) {
-                            final isFavorite = favoriteBooksModel.favoriteBookIds.contains('$id');
+                            final isFavorite = favoriteBooksModel
+                                .favoriteBookIds
+                                .contains('${widget.id}');
                             return Icon(
-                              isFavorite ? Icons.favorite : Icons.favorite_border,
+                              isFavorite
+                                  ? Icons.favorite
+                                  : Icons.favorite_border,
                               color: Colors.red,
                             );
                           },
                         ),
                         onPressed: () {
-                          final favoriteBooksModel = Provider.of<FavoriteBooksModel>(context, listen: false);
-                          favoriteBooksModel.toggleFavorite('$id');
+                          final favoriteBooksModel =
+                              Provider.of<FavoriteBooksModel>(context,
+                                  listen: false);
+                          final isFavorite = favoriteBooksModel.favoriteBookIds
+                              .contains('${widget.id}');
+                          final increase = !isFavorite;
+                          widget.updateFavourite(increase: increase);
+                          favoriteBooksModel.toggleFavorite('${widget.id}');
                         },
                       ),
                     ),
@@ -92,17 +107,14 @@ class BookCard extends StatelessWidget {
               ),
             ),
             Text(
-              title,
+              widget.title,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16.0,
-                height: 1.1,
-              ),
+                  fontWeight: FontWeight.bold, fontSize: 16.0, height: 1.1),
             ),
             const SizedBox(height: 2.0),
             Text(
-              author,
+              widget.author,
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontSize: 14.0,

@@ -45,10 +45,7 @@ class BookDetailPage extends StatelessWidget {
                 description,
                 textAlign: TextAlign.start,
                 style: const TextStyle(
-                  fontSize: 14,
-                  height: 1.4,
-                fontWeight: FontWeight.w300
-                ),
+                    fontSize: 14, height: 1.4, fontWeight: FontWeight.w300),
               ),
             ],
           ),

@@ -1,3 +1,4 @@
+import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
 import 'models/favorite_books.dart';
 import 'screens/main_page.dart';
@@ -17,14 +18,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Bookish',
-      theme: ThemeData.dark(
-        useMaterial3: true,
+    return ThemeProvider(
+      initTheme: ThemeData.dark(useMaterial3: true),
+      builder: (p0, theme) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Bookish',
+        theme: theme,
+        home: const MainPage(),
       ),
-      home: const MainPage(),
     );
   }
 }
-
